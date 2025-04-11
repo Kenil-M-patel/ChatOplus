@@ -1,118 +1,118 @@
-# ChatOplus
+# 📱 ChatOplus
 
-📱 Chatting Application Documentation
-📌 Project Overview
-Project Name: Realtime Chat App
-Description:
 A real-time chatting application that allows users to sign up, log in, send/receive messages, and interact with other users instantly. The app supports private chats, typing indicators, message timestamps, and online status indicators.
 
-🚀 Features
-User Authentication (Register/Login)
+---
 
-One-to-one messaging
+## 📌 Project Overview
 
-Real-time updates using WebSockets
+- **Project Name**: Realtime Chat App  
+- **Description**: Real-time one-to-one chat application with user authentication and WebSocket-based messaging.
 
-Online/offline status
+---
 
-Typing indicator
+## 🚀 Features
 
-Message timestamps
+- User Authentication (Register/Login)
+- One-to-one messaging
+- Real-time updates using WebSockets
+- Online/offline status
+- Typing indicator
+- Message timestamps
+- Persistent message history (saved in DB)
+- Mobile-responsive UI
 
-Persistent message history (saved in DB)
+---
 
-Mobile-responsive UI
+## 🛠️ Tech Stack
 
-🛠️ Tech Stack
-Frontend:
-React.js (with Tailwind CSS for styling)
+### Frontend
+- React.js  
+- Tailwind CSS  
+- Axios  
+- Socket.io-client  
 
-Axios (for API calls)
+### Backend
+- Node.js  
+- Express.js  
+- MongoDB + Mongoose  
+- JWT (Authentication)  
+- Socket.io  
 
-Socket.io-client (for real-time communication)
+---
 
-Backend:
-Node.js
+## ⚙️ Setup Instructions
 
-Express.js
-
-MongoDB + Mongoose
-
-JWT for authentication
-
-Socket.io (for real-time functionality)
-
-⚙️ Setup Instructions
-1. Clone the Repository
-bash
-Copy
-Edit
+### 1. Clone the Repository
+```bash
 git clone https://github.com/your-username/chat-app.git
 cd chat-app
-2. Backend Setup
-bash
-Copy
-Edit
+```
+
+### 2. Backend Setup
+```bash
 cd server
 npm install
 npm run dev
-Create a .env file and add:
+```
 
-env
-Copy
-Edit
+Create a `.env` file in the `server` directory and add the following:
+```env
 PORT=5000
 MONGO_URI=your_mongo_uri
 JWT_SECRET=your_jwt_secret
-3. Frontend Setup
-bash
-Copy
-Edit
+```
+
+### 3. Frontend Setup
+```bash
 cd client
 npm install
 npm start
-🔗 API Endpoints
-Auth
-POST /api/auth/register – Register a new user
+```
 
-POST /api/auth/login – Login with credentials
+---
 
-Messages
-GET /api/messages/:userId – Get message history with a user
+## 🔗 API Endpoints
 
-POST /api/messages/send – Send a new message
+### Auth
+- `POST /api/auth/register` – Register a new user  
+- `POST /api/auth/login` – Login with credentials  
 
-Users
-GET /api/users – Get all users (for contact list)
+### Messages
+- `GET /api/messages/:userId` – Get message history with a user  
+- `POST /api/messages/send` – Send a new message  
 
-GET /api/users/:id – Get user by ID
+### Users
+- `GET /api/users` – Get all users (for contact list)  
+- `GET /api/users/:id` – Get user by ID  
 
-🔌 WebSocket Events
-Client emits:
-join: User joins chat
+---
 
-sendMessage: Send a message
+## 🔌 WebSocket Events
 
-typing: Typing indicator
+### Client Emits:
+- `join`: User joins chat  
+- `sendMessage`: Send a message  
+- `typing`: Typing indicator  
 
-Server emits:
-receiveMessage: Incoming message
+### Server Emits:
+- `receiveMessage`: Incoming message  
+- `userTyping`: Notify other user that someone is typing  
+- `userOnline` / `userOffline`: Online status updates  
 
-userTyping: Notify other user that someone is typing
+---
 
-userOnline / userOffline: Online status updates
+## 🧪 Testing
 
-🧪 Testing
-Manual testing in browser
+- Manual testing in browser  
+- Use Postman for API testing  
+- Use multiple tabs to simulate two users  
 
-Postman for API testing
+---
 
-Use multiple tabs to simulate two users
+## 📁 Folder Structure
 
-📁 Folder Structure
-bash
-Copy
-Edit
+```
 chat-app/
 │
 ├── client/         # React frontend
@@ -126,26 +126,30 @@ chat-app/
 │   └── ...
 │
 └── README.md
-🛡️ Security
-Passwords hashed with bcrypt
+```
 
-JWT tokens used for secure authentication
+---
 
-Basic input validation
+## 🛡️ Security
 
-💡 Future Enhancements
-Group chats
+- Passwords hashed with bcrypt  
+- JWT tokens used for secure authentication  
+- Basic input validation  
 
-File sharing (images, documents)
+---
 
-Voice/video calls
+## 💡 Future Enhancements
 
-Emojis & reactions
+- Group chats  
+- File sharing (images, documents)  
+- Voice/video calls  
+- Emojis & reactions  
+- Dark/light mode toggle  
 
-Dark/light mode toggle
+---
 
-📞 Contact
-Developer: Your Name
-Email: your.email@example.com
-GitHub: [your-github-link]
+## 📞 Contact
 
+- **Developer**: Your Name  
+- **Email**: your.email@example.com  
+- **GitHub**: [your-github-link](https://github.com/your-username)  
